@@ -1,0 +1,32 @@
+.wrapper {
+  background: url("../images/stars.png");
+  height: 100vh;
+  background-size: cover;
+  background-color: #151718;
+  .container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    .content {
+      padding-top: 100px;
+      img {
+        margin-bottom: 85px;
+      }
+      h1 {
+        color: #4980c0;
+        font-size: 96px;
+        margin-bottom: 95px;
+        font-family: Rowdies;
+      }
+      button {
+        width: 395px;
+        height: 79px;
+        border-radius: 7px;
+        background-color: #4980c0;
+        font-size: 22px;
+        cursor: pointer;
+        color: white;
+      }
+    }
+  }
+}
