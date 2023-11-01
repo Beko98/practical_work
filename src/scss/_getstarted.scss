@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Arapey:ital@1&family=Rowdies&display=swap");
+
 .wrapper {
   background: url("../images/stars.png");
   height: 100vh;
@@ -16,7 +18,8 @@
         color: #4980c0;
         font-size: 96px;
         margin-bottom: 95px;
-        font-family: Rowdies;
+        font-weight: 400;
+        font-family: "Rowdies", sans-serif;
       }
       button {
         width: 395px;
