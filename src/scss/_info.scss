@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Lora:ital@1&family=Montserrat:wght@300;400&family=Old+Standard+TT&family=Playfair+Display:ital@1&family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Lora:ital@1&family=Montserrat&family=Old+Standard+TT&family=Playfair+Display:ital@1&family=Tangerine&display=swap');
+
+.wrapper_1{
+    height: 100vh;
+    background-size: cover;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+        .card{
+            height: 565px;
+            width: 500px;
+            margin-top: 90px;
+            background-color: white;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+                h2{
+                    font-size: 50px;
+                    margin-bottom: 20px;
+                    font-family: 'Montserrat', sans-serif;
+
+                }
+                h3{
+                    font-size: 21px;
+                    font-weight: 300;
+                    font-family: 'Montserrat', sans-serif;
+                    margin-bottom: 40px;
+                }
+                p{
+                    margin-bottom: 20px;
+                    font-size: 25px;
+                }
+                .searchDiv{
+                        // background-color: #E6EBFF;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    input{
+                        width: 300px;
+                        height: 55px;
+                        background-color: #E6EBFF;
+                        font-size: 16px;
+                        border: none;
+                        outline: none;
+                        padding: 0 10px;
+                        color: black;
+                    }
+                }
+                button{
+                    background-color: #4980C0;
+                    width: 240px;
+                    height: 45px;
+                    border: none;
+                    border-radius: 50px;
+                    margin-top: 30px;
+                    color: white;
+                    font-size: 15px;
+                    font-family: 'Montserrat', sans-serif;
+                    cursor: pointer;
+                }
+            .addPhoto{
+                width: 85px;
+                height: 100px;
+                background: #E6EBFF;
+                display: flex;
+                justify-content: center;
+                padding: 25px 20px 0 25px;
+                margin-bottom: 30px;
+                border-radius: 100%;
+                
+                .camera{
+                    width: 60px;
+                    height: 60px;
+                    padding-top: 5px;
+                }
+                img{
+                    cursor: pointer;
+                    margin-bottom: 30px;
+                    
+                }
+                .pictureUpload{
+                    width: 85px;
+                    height: 100px;
+                    border-radius: 100%;
+                    object-fit: cover;
+                }
+                input{
+                    display: none;
+                }
+            }
+                
+        }
+}
