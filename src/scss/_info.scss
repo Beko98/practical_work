@@ -26,10 +26,10 @@
       font-size: 21px;
       font-weight: 300;
       font-family: "Montserrat", sans-serif;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
     p {
-      margin-bottom: 20px;
+      margin: 20px 0 30px 0;
       font-size: 25px;
     }
     .searchDiv {
@@ -60,8 +60,8 @@
       cursor: pointer;
     }
     .addPhoto {
-      width: 125px;
-      height: 125px;
+      width: 130px;
+      height: 130px;
       background: #e6ebff;
       display: flex;
       justify-content: center;
@@ -76,12 +76,15 @@
       }
       img {
         cursor: pointer;
-        margin-bottom: 30px;
+        width: 100%; 
+        height: 100%;
+        border-radius: 50%; 
+        object-fit: cover;
       }
       .pictureUpload {
         max-width: 100%;
         max-height: 100%;
-        margin-top: 30px;
+        margin-top: 20px;
         border-radius: 100%;
       }
       input {
