@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 14px 90px;
+  color: white;
+  font-size: 21px;
+
+  h1 {
+    margin: 0;
+  }
+
+  .infoContainer {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin: 0 10px 0 0;
+    }
+
+    img {
+      width: 70px;
+      height: 65px;
+      border-radius: 50%;
+      background-color: #e6ebff;
+    }
+  }
+
+  h2 {
+    margin: 0;
+  }
+}
