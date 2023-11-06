@@ -11,7 +11,6 @@ export function PrivateRoutes() {
       <Route path="/" element={<GetStarted />} />
       <Route path="/info" element={<Info />} />
       <Route path="/form" element={<Form />} />
-      <Route path="/navbar" element={<Navbar />} />
     </Routes>
   );
 }

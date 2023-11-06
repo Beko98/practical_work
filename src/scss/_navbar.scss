@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Lora:ital@1&family=Montserrat:wght@300;400;700&family=Old+Standard+TT&family=Playfair+Display:ital@1&family=Tangerine&display=swap');
+
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -6,28 +9,43 @@
   padding: 14px 90px;
   color: white;
   font-size: 21px;
+  border: 1px white solid;
+
+  hr{
+    height: 107px;
+    bottom: 611px;
+    position: absolute;
+    right: 415px;
+  }
 
   h1 {
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
   }
 
   .infoContainer {
     display: flex;
     align-items: center;
 
+
     p {
       margin: 0 10px 0 0;
     }
 
     img {
-      width: 70px;
-      height: 65px;
+      cursor: pointer;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
-      background-color: #e6ebff;
+      object-fit: cover;
+      margin: 0 0 0 30px;
     }
   }
 
   h2 {
-    margin: 0;
+    margin-left: 700px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
   }
 }
