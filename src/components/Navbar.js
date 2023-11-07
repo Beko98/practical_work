@@ -39,6 +39,7 @@
 import React, { useState } from "react"; // useState is imported from react, not react-router-dom
 import { useNavigate, useLocation } from "react-router-dom";
 import "../scss/_navbar.scss";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const location = useLocation();
@@ -60,7 +61,9 @@ const Navbar = () => {
     <div className="navbar-container">
       <nav className="navbar">
         <h1>Form</h1>
-        <h2>API</h2>
+        <h2>
+          <Link to="/api">API</Link>
+        </h2>
         <div className="infoContainer">
           {name && <p> {name}</p>}
           {image && (

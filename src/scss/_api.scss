@@ -1,0 +1,81 @@
+.api-page {
+  margin: 20px;
+
+  .post-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // This centers your post list
+
+    li {
+      background: #f9f9f9;
+      border: 1px solid #e1e1e1;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      width: 80%; // You might want to set a max-width to avoid very wide posts on larger screens
+      max-width: 600px; // Set a max-width for large screens
+
+      h2 {
+        font-size: 1.2rem;
+        color: #333;
+        text-align: center; // Center the post title
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #666;
+        text-align: center; // Justify the text or center if you prefer
+      }
+    }
+  }
+}
+.ApiContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  ul {
+    margin-bottom: 50px;
+    line-height: 1.6;
+    font-size: 18px;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  li {
+    margin: 0 5px;
+
+    a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f4f4f4;
+      }
+
+      &.active {
+        background-color: #007bff;
+        color: white;
+      }
+    }
+  }
+}
+
+.page-link-active {
+  background-color: #007bff;
+  color: #fff !important;
+  border-color: #007bff;
+}

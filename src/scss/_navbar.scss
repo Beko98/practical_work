@@ -9,6 +9,16 @@
   color: white;
   font-size: 21px;
   border: 1px white solid;
+  a.api-link {
+    color: white;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: white;
+      text-decoration: none;
+    }
+  }
 
   // hr {
   //   height: 107px;
@@ -22,6 +32,22 @@
     margin: 0;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
+  }
+  h2 {
+    margin-left: 700px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+
+    a {
+      color: white;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: white;
+        text-decoration: none;
+      }
+    }
   }
 
   .infoContainer {
@@ -42,12 +68,6 @@
       object-fit: cover;
       margin: 0 0 0 30px;
     }
-  }
-
-  h2 {
-    margin-left: 700px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
   }
 }
 
