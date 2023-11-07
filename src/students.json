@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "firstName": "John",
+    "lastName": "Doe",
+    "status": "Active",
+    "gender": "Male",
+    "points": 90,
+    "personalNumber": "123456",
+    "email": "john.doe@example.com",
+    "mobileNumber": "+1234567890",
+    "address": "123 Main St",
+    "dateOfBirth": "01/01/2000"
+  }
+]

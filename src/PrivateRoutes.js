@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import GetStarted from "./components/GetStarted";
 import Info from "./components/Info";
 import Form from "./components/Form";
-import Navbar from "./components/Navbar";
 
 export function PrivateRoutes() {
   return (

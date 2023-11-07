@@ -2,6 +2,75 @@
   height: 100vh;
   background-size: cover;
   background-color: black;
-  display: flex;
-  justify-content: center;
+  .mainContainer {
+    .combined {
+      .studentFormCard {
+        background-color: white;
+        width: 1201px;
+        height: 500px;
+        border-radius: 10px;
+        margin: 20px auto;
+        padding: 20px;
+        overflow-x: auto;
+        .studentFeatures {
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px solid #ccc;
+        }
+        .student-card {
+          overflow-x: auto;
+          white-space: nowrap;
+          .outcome {
+            display: flex;
+            justify-content: space-around;
+          }
+        }
+      }
+      .filter_search {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .search-container {
+          display: flex;
+          align-items: center;
+          background-color: white;
+          border-radius: 11px;
+          border: none;
+          outline: none;
+          img {
+            margin-left: 10px;
+            cursor: pointer;
+          }
+          input {
+            height: 30px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            margin-left: 10px;
+          }
+        }
+
+        .filterBtn {
+          display: flex;
+          width: 140px;
+          height: 30px;
+          background-color: white;
+          align-items: center;
+          border-radius: 10px;
+          margin: 20px;
+          cursor: pointer;
+          img {
+            padding: 5px 18px 5px;
+          }
+          hr {
+            height: 20px;
+            margin-right: 10px;
+          }
+          h2 {
+            padding: 0 28px 0 8px;
+          }
+        }
+      }
+    }
+  }
 }
