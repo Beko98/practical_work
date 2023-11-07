@@ -6,10 +6,16 @@ import Navbar from "./Navbar";
 import search from "../images/search.png";
 import studentsData from "../students.json";
 import PopupModal from "./PopupModal";
+import FilterDropdown from "./FilterDropdown";
 
 function Form() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
+  const [filterDropdownVisible, setFilterDropdownVisible] = useState(false);
+
+  const toggleFilterDropdown = () => {
+    setFilterDropdownVisible(!filterDropdownVisible);
+  };
 
   const paginateData = (data) => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -37,8 +43,11 @@ function Form() {
       )}
       <div className="mainContainer">
         <div className="combined">
+          <div className="filter">
+            <FilterDropdown isVisible={filterDropdownVisible} />
+          </div>
           <div className="filter_search">
-            <div className="filterBtn">
+            <div className="filterBtn" onClick={toggleFilterDropdown}>
               <img src={filter} alt="filter" />
               <hr />
               <h2>filter</h2>
