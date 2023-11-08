@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import "../scss/_reset.scss";
 import "../scss/_form.scss";
 import "../scss/_colors.scss";
@@ -10,15 +10,34 @@ import studentsData from "../students.json";
 import PopupModal from "./PopupModal";
 import FilterDropdown from "./FilterDropdown";
 import LocalData from "./LocalData";
+import Pagination from "../components/Pagination";
 
 function Form() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
   const [filterDropdownVisible, setFilterDropdownVisible] = useState(false);
+  const [filters, setFilters] = useState({
+    male: false,
+    female: false,
+    active: false,
+    inactive: false,
+  });
+  const [showPopup, setShowPopup] = useState(false);
 
-  const toggleFilterDropdown = () => {
-    setFilterDropdownVisible(!filterDropdownVisible);
+  const handleFilterChange = (filterName, value) => {
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      [filterName]: value,
+    }));
   };
+
+  const filteredStudents = studentsData.filter((student) => {
+    if (filters.active && !student.isActive) return false;
+    if (filters.inactive && student.isActive) return false;
+    if (filters.male && student.gender !== "male") return false;
+    if (filters.female && student.gender !== "female") return false;
+    return true;
+  });
 
   const paginateData = (data) => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -26,9 +45,15 @@ function Form() {
     return data.slice(startIndex, endIndex);
   };
 
-  const students = paginateData(studentsData);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
-  const [showPopup, setShowPopup] = useState(false);
+  const studentsToShow = paginateData(filteredStudents);
+
+  const toggleFilterDropdown = () => {
+    setFilterDropdownVisible(!filterDropdownVisible);
+  };
 
   const handleImageClick = () => {
     setShowPopup(true);
@@ -47,23 +72,33 @@ function Form() {
       <div className="mainContainer">
         <div className="combined">
           <div className="filter">
-            <FilterDropdown isVisible={filterDropdownVisible} />
+            <FilterDropdown
+              isVisible={filterDropdownVisible}
+              filters={filters}
+              onFilterChange={handleFilterChange}
+            />
           </div>
           <div className="something">
             <div className="filter_search">
               <div className="filterBtn" onClick={toggleFilterDropdown}>
-                <img src={filter} alt="filter" />
+                <img src={filter} alt="Filter" />
                 <hr />
-                <h2>filter</h2>
+                <h2>Filter</h2>
               </div>
               <div className="search-container">
-                <img src={search} alt="" />
+                <img src={search} alt="Search" />
                 <input type="text" placeholder="Search..." />
               </div>
             </div>
             <div className="studentFormCard">
-              <LocalData />
+              <LocalData students={studentsToShow} />
             </div>
+            <Pagination
+              currentPage={currentPage}
+              itemsPerPage={itemsPerPage}
+              totalItems={filteredStudents.length}
+              paginate={paginate}
+            />
           </div>
         </div>
       </div>
@@ -72,36 +107,3 @@ function Form() {
 }
 
 export default Form;
-
-{
-  /* <div className="studentFeatures">
-                <h3>
-                  სტუდენტის სახელი <br /> და გვარი
-                </h3>
-                <h3>სტატუსი</h3>
-                <h3>სქესი</h3>
-                <h3>ქულები</h3>
-                <h3>პირადი ნომერი</h3>
-                <h3>მაილი</h3>
-                <h3>ტელეფონის ნომერი</h3>
-                <h3>მისამართი</h3>
-                <h3>დაბადების თარიღი</h3>
-              </div>
-              {students.map((student) => (
-                <div key={student.id} className="student-card">
-                  <div className="outcome">
-                    <p>
-                      {student.firstName} {student.lastName}
-                    </p>
-                    <p> {student.status}</p>
-                    <p> {student.gender}</p>
-                    <p> {student.points}</p>
-                    <p> {student.personalNumber}</p>
-                    <p> {student.email}</p>
-                    <p> {student.mobileNumber}</p>
-                    <p> {student.address}</p>
-                    <p> {student.dateOfBirth}</p>
-                  </div>
-                </div>
-              ))} */
-}
