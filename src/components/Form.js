@@ -46,48 +46,50 @@ function Form() {
           <div className="filter">
             <FilterDropdown isVisible={filterDropdownVisible} />
           </div>
-          <div className="filter_search">
-            <div className="filterBtn" onClick={toggleFilterDropdown}>
-              <img src={filter} alt="filter" />
-              <hr />
-              <h2>filter</h2>
-            </div>
-            <div className="search-container">
-              <img src={search} alt="" />
-              <input type="text" placeholder="Search..." />
-            </div>
-          </div>
-          <div className="studentFormCard">
-            <div className="studentFeatures">
-              <h3>
-                სტუდენტის სახელი <br /> და გვარი
-              </h3>
-              <h3>სტატუსი</h3>
-              <h3>სქესი</h3>
-              <h3>ქულები</h3>
-              <h3>პირადი ნომერი</h3>
-              <h3>მაილი</h3>
-              <h3>ტელეფონის ნომერი</h3>
-              <h3>მისამართი</h3>
-              <h3>დაბადების თარიღი</h3>
-            </div>
-            {students.map((student) => (
-              <div key={student.id} className="student-card">
-                <div className="outcome">
-                  <p>
-                    {student.firstName} {student.lastName}
-                  </p>
-                  <p> {student.status}</p>
-                  <p> {student.gender}</p>
-                  <p> {student.points}</p>
-                  <p> {student.personalNumber}</p>
-                  <p> {student.email}</p>
-                  <p> {student.mobileNumber}</p>
-                  <p> {student.address}</p>
-                  <p> {student.dateOfBirth}</p>
-                </div>
+          <div className="something">
+            <div className="filter_search">
+              <div className="filterBtn" onClick={toggleFilterDropdown}>
+                <img src={filter} alt="filter" />
+                <hr />
+                <h2>filter</h2>
               </div>
-            ))}
+              <div className="search-container">
+                <img src={search} alt="" />
+                <input type="text" placeholder="Search..." />
+              </div>
+            </div>
+            <div className="studentFormCard">
+              <div className="studentFeatures">
+                <h3>
+                  სტუდენტის სახელი <br /> და გვარი
+                </h3>
+                <h3>სტატუსი</h3>
+                <h3>სქესი</h3>
+                <h3>ქულები</h3>
+                <h3>პირადი ნომერი</h3>
+                <h3>მაილი</h3>
+                <h3>ტელეფონის ნომერი</h3>
+                <h3>მისამართი</h3>
+                <h3>დაბადების თარიღი</h3>
+              </div>
+              {students.map((student) => (
+                <div key={student.id} className="student-card">
+                  <div className="outcome">
+                    <p>
+                      {student.firstName} {student.lastName}
+                    </p>
+                    <p> {student.status}</p>
+                    <p> {student.gender}</p>
+                    <p> {student.points}</p>
+                    <p> {student.personalNumber}</p>
+                    <p> {student.email}</p>
+                    <p> {student.mobileNumber}</p>
+                    <p> {student.address}</p>
+                    <p> {student.dateOfBirth}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

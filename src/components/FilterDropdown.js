@@ -145,7 +145,7 @@
 
 // export default FilterDropdown;
 import React, { useState } from "react";
-import "../scss/_filterDropdown.scss"; // Make sure to create and import this SCSS file
+import "../scss/_filterDropdown.scss";
 
 function FilterDropdown({ isVisible }) {
   const [statusFilterVisible, setStatusFilterVisible] = useState(false);
@@ -158,7 +158,6 @@ function FilterDropdown({ isVisible }) {
     inactive: false,
   });
 
-  // Handles toggling the filter sections
   const toggleStatusFilter = () => {
     setStatusFilterVisible(!statusFilterVisible);
   };
@@ -167,7 +166,6 @@ function FilterDropdown({ isVisible }) {
     setGenderFilterVisible(!genderFilterVisible);
   };
 
-  // Handles changing the state of each filter option
   const handleFilterChange = (e) => {
     const { name, checked } = e.target;
     setFilters((prevFilters) => ({ ...prevFilters, [name]: checked }));
@@ -175,7 +173,6 @@ function FilterDropdown({ isVisible }) {
 
   return (
     <div className={`filter-dropdown ${dropdownClass}`}>
-      {/* Status Filter */}
       <div className="filter-section">
         <button className="dropdown-toggle" onClick={toggleStatusFilter}>
           {statusFilterVisible ? "▲" : "▼"} სტუდენტის სტატუსი

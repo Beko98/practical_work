@@ -36,7 +36,7 @@
 
 // export default Navbar;
 
-import React, { useState } from "react"; // useState is imported from react, not react-router-dom
+import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "../scss/_navbar.scss";
 import { Link } from "react-router-dom";
@@ -46,8 +46,6 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [isPopupOpen, setPopupOpen] = useState(false);
 
-  // If the state is passed to this component via the location object, it will be used.
-  // Otherwise, the saved values from localStorage will be used.
   const name = location.state?.name || localStorage.getItem("userName");
   const image = location.state?.image || localStorage.getItem("userImage");
 

@@ -4,6 +4,11 @@
   background-color: black;
   .mainContainer {
     .combined {
+      .filter {
+        position: absolute;
+        left: 40px;
+        top: 245px;
+      }
       .studentFormCard {
         background-color: white;
         width: 1201px;
@@ -34,48 +39,53 @@
           }
         }
       }
-      .filter_search {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        .search-container {
+      .something {
+        margin-left: 100px;
+        .filter_search {
           display: flex;
           align-items: center;
-          background-color: white;
-          border-radius: 11px;
-          border: none;
-          outline: none;
-          img {
-            margin-left: 10px;
-            cursor: pointer;
-          }
-          input {
-            height: 30px;
-            border-radius: 8px;
+          justify-content: space-around;
+          gap: 315px;
+          margin: 70px 0 30px;
+          .search-container {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 11px;
             border: none;
             outline: none;
-            margin-left: 10px;
+            img {
+              margin-left: 10px;
+              cursor: pointer;
+            }
+            input {
+              height: 30px;
+              border-radius: 8px;
+              border: none;
+              outline: none;
+              margin-left: 10px;
+            }
           }
-        }
 
-        .filterBtn {
-          display: flex;
-          width: 140px;
-          height: 30px;
-          background-color: white;
-          align-items: center;
-          border-radius: 10px;
-          margin: 20px;
-          cursor: pointer;
-          img {
-            padding: 5px 18px 5px;
-          }
-          hr {
-            height: 20px;
-            margin-right: 10px;
-          }
-          h2 {
-            padding: 0 28px 0 8px;
+          .filterBtn {
+            display: flex;
+            width: 140px;
+            height: 30px;
+            background-color: white;
+            align-items: center;
+            border-radius: 10px;
+            margin-right: 40px;
+            cursor: pointer;
+            img {
+              padding: 5px 10px 5px;
+            }
+            hr {
+              height: 20px;
+              margin-right: 10px;
+            }
+            h2 {
+              padding: 0 45px 0 8px;
+            }
           }
         }
       }
