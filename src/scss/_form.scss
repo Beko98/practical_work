@@ -15,14 +15,16 @@
         height: 500px;
         border-radius: 10px;
         margin: 20px auto;
-        padding: 20px;
         overflow-x: auto;
+
         .studentFeatures {
           display: grid;
-          grid-template-columns: repeat(9, 1fr);
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
           gap: 16px;
           text-align: center;
           margin-bottom: 20px;
+          max-width: 100%;
+          overflow-x: auto;
 
           h3 {
             font-size: 14px;
@@ -30,12 +32,12 @@
             margin: 0;
           }
         }
-        .student-card {
-          overflow-x: auto;
-          white-space: nowrap;
-          .outcome {
-            display: flex;
-            justify-content: space-around;
+        table {
+          tr:nth-child(odd) {
+            background-color: #f2f2f2;
+          }
+          tr:nth-child(even) {
+            background-color: #ffffff;
           }
         }
       }
@@ -45,7 +47,7 @@
           display: flex;
           align-items: center;
           justify-content: space-around;
-          gap: 315px;
+          gap: 245px;
           margin: 70px 0 30px;
           .search-container {
             display: flex;

@@ -1,0 +1,66 @@
+@import "./colors";
+
+table {
+  background-color: $primary-color;
+
+  width: 100%;
+
+  border-collapse: collapse;
+
+  font-family: $font-family;
+  font-size: 16px;
+}
+
+thead {
+  background-color: $secondary-color;
+  color: $tertiary-color;
+  text-align: center;
+}
+
+tfoot {
+  @extend thead;
+}
+
+tbody {
+  color: black;
+
+  text-align: left;
+}
+
+tr {
+  height: 40px;
+  min-width: 100px;
+}
+
+td,
+th {
+  padding: 10px;
+  text-align: start;
+  padding-left: 25px;
+}
+
+.student-list-container {
+  width: 2635px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    &:nth-child(-n + 6) {
+      min-width: 120px;
+      height: 60px;
+    }
+  }
+}
+
+.headlines {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin-top: 10px;
+  background-color: $secondary-color !important;
+}

@@ -1,12 +1,15 @@
 import { React, useState } from "react";
 import "../scss/_reset.scss";
 import "../scss/_form.scss";
+import "../scss/_colors.scss";
+
 import filter from "../images/filter.png";
 import Navbar from "./Navbar";
 import search from "../images/search.png";
 import studentsData from "../students.json";
 import PopupModal from "./PopupModal";
 import FilterDropdown from "./FilterDropdown";
+import LocalData from "./LocalData";
 
 function Form() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -59,7 +62,19 @@ function Form() {
               </div>
             </div>
             <div className="studentFormCard">
-              <div className="studentFeatures">
+              <LocalData />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Form;
+
+{
+  /* <div className="studentFeatures">
                 <h3>
                   სტუდენტის სახელი <br /> და გვარი
                 </h3>
@@ -88,30 +103,5 @@ function Form() {
                     <p> {student.dateOfBirth}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+              ))} */
 }
-
-export default Form;
-
-// {students.map((student) => (
-//   <div key={student.id} className="student-card">
-//     <h2>
-//       student name and surname:
-//       {student.firstName} {student.lastName}
-//     </h2>
-//     <p>Status: {student.status}</p>
-//     <p>Gender: {student.gender}</p>
-//     <p>Points: {student.points}</p>
-//     <p>Personal Number: {student.personalNumber}</p>
-//     <p>Email: {student.email}</p>
-//     <p>Mobile Number: {student.mobileNumber}</p>
-//     <p>Address: {student.address}</p>
-//     <p>Date of Birth: {student.dateOfBirth}</p>
-//   </div>
-// ))}
